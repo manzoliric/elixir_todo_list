@@ -7,6 +7,8 @@ defmodule ElixirTodoListWeb.Router do
 
   scope "/api", ElixirTodoListWeb do
     pipe_through :api
+
+    get "/todos", TodoController, :index
   end
 
   # Enable LiveDashboard in development
